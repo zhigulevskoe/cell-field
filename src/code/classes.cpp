@@ -1,4 +1,4 @@
-#include "../headers/classes.h"
+#include "../headers/include.h"
 #include <iostream>
 
 Cell::Cell () { }
@@ -17,7 +17,7 @@ void Cell::set_face (std::string symbol)
 
 void Cell::print_face ()
 {
-    std::cout << face << std::endl;
+    std::cout << face;
 }
 
 std::string Cell::get_face ()

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "const.h"
+// #include "funcs.h"
+
 #include <string>
 
 class Cell
