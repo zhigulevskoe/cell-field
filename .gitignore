@@ -1,0 +1,32 @@
+# Исполняемые файлы
+exe
+*.exe
+*.out
+*.app
+
+# Объектные файлы  
+*.o
+*.a
+*.so
+*.dylib
+
+# Сборка
+build/
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Резервные копии
+*~
+*.bak
+*.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Системные файлы
+.DS_Store
+Thumbs.db
