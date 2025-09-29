@@ -1,7 +1,7 @@
-#include "../headers/include.h"
-// #include "../headers/classes.h"
-// #include "../headers/const.h"
-// #include "../headers/funcs.h"
+// #include "../headers/include.h"
+#include "../headers/classes.h"
+#include "../headers/const.h"
+#include "../headers/funcs.h"
 
 #include <iostream>
 #include <vector>
@@ -14,7 +14,11 @@ int main ()
 
     game_field[0][0].set_face("P");
 
-    render_field(game_field);
+    // render_field(game_field);
+
+    Item item = Item("I");
+
+    cout << item.get_face() << endl;
 
     return 0;
 }
