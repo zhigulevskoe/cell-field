@@ -19,3 +19,24 @@ class Cell
         // uint x, y;
         std::string face;
 };
+
+class Item : public Cell
+{
+    public:
+        Item();
+        Item(std::string face);
+};
+
+class Entity : public Item
+{
+    public:
+        Entity();
+        Entity(std::string face);
+        Entity(std::string face, bool mayCollide);
+        
+        void set_collision (bool collision);
+        bool get_collision ();
+    
+    private:
+        bool mayCollide = false;
+};
