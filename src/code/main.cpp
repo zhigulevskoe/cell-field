@@ -39,7 +39,7 @@ int main ()
     {
         clean_screen();
         // render_field(game_field);
-        // render(game_field);
+        render(game_field);
         // measure_time(render, game_field);
 
         printf("Next move: ");
