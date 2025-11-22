@@ -4,39 +4,43 @@
 // #include "funcs.h"
 
 #include <string>
+#include <vector>
 
 class Cell
 {
     public:
-        Cell();
-        Cell(std::string face);
-        // void generate_field (uint x, uint y);
-        void print_face ();
-        std::string get_face ();
+        Cell() = default;
+        Cell(std::string face, bool mayCollide, uint spawn_x, uint spawn_y);
+
+        void print_face () const;
+
         void set_face (std::string symbol);
+        std::string get_face ();
 
-    private:
-        // uint x, y;
-        std::string face;
-};
-
-class Item : public Cell
-{
-    public:
-        Item();
-        Item(std::string face);
-};
-
-class Entity : public Item
-{
-    public:
-        Entity();
-        Entity(std::string face);
-        Entity(std::string face, bool mayCollide);
-        
         void set_collision (bool collision);
-        bool get_collision ();
-    
-    private:
+        bool get_collision () const;
+
+        void set_x (uint x);
+        uint get_x () const;
+
+        void set_y (uint y);
+        uint get_y () const;
+
+    protected:
+        uint x = 0, y = 0;
+        std::string face;
         bool mayCollide = false;
+};
+
+
+
+class Entity : public Cell
+{
+    public:
+        using Cell::Cell;
+
+        void move_to(std::vector<std::vector<Cell>> &field, uint new_x, uint new_y);
+    
+    protected:
+        // bool mayCollide = false;
 };
